@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Banco | Dados do Usuário</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/">
+            <span class="navbar-brand mb-0 h1">
+                  <i class="material-icons">arrow_back</i>
+            </span>
+        </a>
+    </nav>
+
+    <div class="container" style="width: 550px; background-color: rgb(255, 255, 185); height: 420px;word-wrap: break-word; text-align: center;box-shadow: 0px 2px 15px -7px rgba(133,133,133,1);
+" >
+        <br>
+        <samp>- BANCO BUILDER -</samp>
+        <samp>=====================================================</samp>
+        <samp th:text="${usuario.nome}"></samp> <br>
+        <samp th:text="${usuario.cpf}"></samp> <br>
+        <samp>-----------------------------------------------------</samp>
+        <div style="text-align: left">
+            <samp>IDADE: </samp><samp th:text="${usuario.nome}"></samp><br>
+
+            <samp th:if="${usuario.casado == false}">ESTADO CIVIL: SOLTEIRO</samp> <br th:if="${usuario.casado == false}">
+
+            <samp th:if="${usuario.casado == true}">ESTADO CIVIL: CASADO</samp> <br th:if="${usuario.casado == true}">
+            <samp th:if="${usuario.casado == true}">NOME CONJUGE: </samp><samp th:text="${usuario.nomeConjuge}"></samp> <br th:if="${usuario.casado == true}">
+
+            <samp>EMAIL:</samp><samp th:text="${usuario.email}"></samp> <br>
+            <samp>ENDERECO:</samp><samp th:text="${usuario.endereco}"></samp> <br>
+            <samp>NOME DA MÃE:</samp><samp th:text="${usuario.nomeDaMae}"></samp> <br>
+            <samp>NOME DO PAI:</samp><samp th:text="${usuario.nomeDoPai}"></samp><br>
+        </div>
+        <samp>=====================================================</samp>
+        <samp>=====================================================</samp>
+        <small>Banco Builder Pattern</small>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
